@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Slowka J. Angielski</string>
+    <string name="infinitive">Infinitive</string>
+    <string name="past_tense">Past tense</string>
+    <string name="past_participle">Past participle</string>
+    <string name="test_button">Test</string>
+    <string name="reset_button">Reset</string>
+</resources>
