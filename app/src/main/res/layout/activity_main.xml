@@ -12,19 +12,25 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <RadioButton
+            android:id="@+id/radioInf"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="false"
             android:text="@string/infinitive"/>
         <RadioButton
+            android:id="@+id/radioTense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="false"
             android:text="@string/past_tense"/>
         <RadioButton
+            android:id="@+id/radioPart"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="false"
             android:text="@string/past_participle"/>
     </RadioGroup>
 
@@ -37,13 +43,15 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="@string/test_button"/>
+            android:text="@string/test_button"
+            android:layout_marginEnd="5dp" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="@string/reset_button"/>
+            android:text="@string/reset_button"
+            android:layout_marginStart="5dp" />
     </LinearLayout>
     <ListView
         android:id="@+id/mainList"

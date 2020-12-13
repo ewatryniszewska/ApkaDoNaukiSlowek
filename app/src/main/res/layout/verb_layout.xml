@@ -11,14 +11,34 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/infinitiveEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"/>
+
     <TextView
         android:id="@+id/pastTense"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/pastTenseEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"/>
+
     <TextView
         android:id="@+id/pastParticiple"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/pastParticipleEdit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"

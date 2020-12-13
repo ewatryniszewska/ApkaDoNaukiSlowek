@@ -3,15 +3,17 @@ package com.example.slowkajangielski;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.RadioButton;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ListView mainList;
     private ArrayList<IrregularVerb> irregularVerbs;
-
+    private RadioButton rInfinitive, rTense, rParticiple;
+    private IrregularVerbAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mainList = findViewById(R.id.mainList);
+        rInfinitive = findViewById(R.id.radioInf);
+        rTense = findViewById(R.id.radioTense);
+        rParticiple = findViewById(R.id.radioPart);
+
+        rInfinitive.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    adapter.setState(1);
+                }
+            }
+        });
+
+        rTense.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    adapter.setState(2);
+                }
+            }
+        });
+
+        rParticiple.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    adapter.setState(3);
+                }
+            }
+        });
 
         irregularVerbs = new ArrayList<>();
         irregularVerbs.add(new IrregularVerb("be", "was/were","been"));
@@ -32,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         irregularVerbs.add(new IrregularVerb("choose","chose","chosen"));
         irregularVerbs.add(new IrregularVerb("come","came","come"));
 
-        IrregularVerbAdapter adapter = new IrregularVerbAdapter(this, irregularVerbs);
+        adapter = new IrregularVerbAdapter(this, irregularVerbs);
         mainList.setAdapter(adapter);
     }
 }
