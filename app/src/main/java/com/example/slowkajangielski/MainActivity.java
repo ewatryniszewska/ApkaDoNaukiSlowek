@@ -3,6 +3,8 @@ package com.example.slowkajangielski;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -13,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView mainList;
     private ArrayList<IrregularVerb> irregularVerbs;
     private RadioButton rInfinitive, rTense, rParticiple;
+    private Button test, reset;
     private IrregularVerbAdapter adapter;
 
     @Override
@@ -66,5 +69,18 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new IrregularVerbAdapter(this, irregularVerbs);
         mainList.setAdapter(adapter);
+    }
+
+    public void resetList(View view) {
+        rInfinitive.setChecked(false);
+        rTense.setChecked(false);
+        rParticiple.setChecked(false);
+
+        adapter.checkAnswers(false);
+        adapter.setState(0);
+    }
+
+    public void test(View view) {
+        adapter.checkAnswers(true);
     }
 }
