@@ -28,9 +28,11 @@
 
 ## Features
 Learning mode
+
 ![Learning mode](documentation/main.png)
 
 Testing your knowledge
+
 ![Testing](documentation/infinitive.png)
 ![Testing](documentation/test.png)
 ![Testing](documentation/pastpart.png)
